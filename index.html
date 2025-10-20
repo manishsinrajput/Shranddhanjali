@@ -161,20 +161,20 @@
         
 
         .portrait-frame {
-            width: 300px;
-            height: 400px;
-            border: 10px solid #8B4513;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5), 
-                        inset 0 0 20px rgba(255, 215, 0, 0.3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.5);
-            position: relative;
-            overflow: hidden;
-            margin: auto;
-        }
+    width: 300px;            /* Desktop width */
+    max-width: 90vw;         /* Mobile में frame viewport के अनुसार shrink हो जाए */
+    aspect-ratio: 3 / 4;     /* height proportional to width, prevents split */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5), 
+                inset 0 0 20px rgba(255, 215, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
 
         .portrait-frame::before {
             content: "";
@@ -194,8 +194,7 @@
     height: 100%;
     background-image: url('images/jwala-singh.png'); /* Dadaji ka photo path */
     background-size: cover;       /* Frame ko pura bhar de */
-    background-position: au;  /* Photo center me rahe */
-    border-radius: 10px;
+    background-position: center;  /* Photo center me rahe */
 }
 
         /* Typewriter Intro */
